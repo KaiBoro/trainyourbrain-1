@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- Google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles link -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Train your brain</title>
+  </head>
+  <body>
+    <section class="game">
+      <h1 class="heading-primary">Train your brain</h1>
+
+      <!-- Scores -->
+      <div class="row">
+        <div class="grid-container-facts">
+          <div class="facts">
+            <p class="level-label">Level</p>
+            <p class="level-scores">Beginner</p>
+          </div>
+          <div class="facts"></div>
+          <div class="facts">
+            <p class="current-label">Score</p>
+            <p class="current-scores">0</p>
+          </div>
+          <div class="facts">
+            <p class="attempts-label">Attempts</p>
+            <p class="attempts-scores">0</p>
+          </div>
+          <div class="facts">
+            <p class="highscore-label">Highscore</p>
+            <p class="highscore-scores">0</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game fields -->
+      <div class="row">
+        <div class="grid-container-fields">
+          <div class="field field--1" onclick="addUserInput(1)">
+            <div class="field__textbox">1</div>
+          </div>
+          <div class="field field--2" onclick="addUserInput(2)">
+            <div class="field__textbox">2</div>
+          </div>
+          <div class="field field--3" onclick="addUserInput(3)">
+            <div class="field__textbox">3</div>
+          </div>
+          <div class="field field--4" onclick="addUserInput(4)">
+            <div class="field__textbox">4</div>
+          </div>
+          <div class="field field--5" onclick="addUserInput(5)">
+            <div class="field__textbox">5</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info field -->
+      <div class="row">
+        <p class="info">
+          Let´s start. 5 numbers to memorize. Get 10 sequences right in a row
+          without any errors to move up one level.
+        </p>
+      </div>
+
+      <!-- Control buttons -->
+      <div class="row">
+        <button href="" class="btn btn--start">Start</button>
+        <button href="" class="btn btn--check">Check</button>
+        <button href="" class="btn btn--reset">Reset</button>
+        <button href="" class="btn btn--level">Level up</button>
+      </div>
+    </section>
+
+    <!-- JS link -->
+    <script src="script.js"></script>
+  </body>
+</html>
