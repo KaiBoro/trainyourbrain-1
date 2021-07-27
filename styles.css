@@ -43,6 +43,7 @@ body {
 }
 
 @media screen and (hover: none) {
+  .field,
   .field:link,
   .field:visited,
   .field:hover,
@@ -53,7 +54,6 @@ body {
     position: relative;
     cursor: pointer;
     border: 2px solid transparent;
-    transition: all 0.3s;
   }
 }
 
@@ -88,6 +88,7 @@ body {
 }
 
 @media screen and (hover: none) {
+  .btn,
   .btn:link,
   .btn:active,
   .btn:hover,
@@ -103,7 +104,6 @@ body {
     cursor: pointer;
     margin: 0 1rem;
     border: 1px solid transparent;
-    transition: all 0.3s;
   }
 }
 
