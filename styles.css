@@ -13,9 +13,11 @@ html {
 body {
   color: #b2b1b9;
   font-family: "Lato", sans-serif;
-  -webkit-user-select: none; /* Chrome/Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+ */
+}
+
+::selection {
+  background-color: #ffd523;
+  color: #2c2e43;
 }
 
 /* Game view */
