@@ -43,11 +43,7 @@ body {
 }
 
 @media screen and (hover: none) {
-  .field,
-  .field:link,
-  .field:visited,
-  .field:hover,
-  .field:active {
+  .field {
     padding: 5rem;
     background-color: #b2b1b9;
     color: #2c2e43;
@@ -88,11 +84,7 @@ body {
 }
 
 @media screen and (hover: none) {
-  .btn,
-  .btn:link,
-  .btn:active,
-  .btn:hover,
-  .btn:visited {
+  .btn {
     width: 20%;
     padding: 10px 30px;
     display: inline-block;
