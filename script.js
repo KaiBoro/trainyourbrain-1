@@ -31,7 +31,7 @@ let highscore = 0;
 
 // Initialize number of blinks and initialize max attempts
 let numberBlinks = 5;
-const maxAttempts = 3;
+const maxAttempts = 10;
 
 // Change color of bottons
 function changeColor(buttonEl, newColor) {

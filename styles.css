@@ -42,25 +42,41 @@ body {
   justify-content: center;
 }
 
-.field {
-  padding: 5rem;
-  background-color: #b2b1b9;
-  color: #2c2e43;
-  position: relative;
-  cursor: pointer;
-  box-shadow: rgba(255, 213, 35, 0.2) 0px 7px 29px 0px;
-  border: 2px solid transparent;
-  transition: all 0.3s;
+@media screen and (hover: none) {
+  .field:link,
+  .field:visited,
+  .field:hover,
+  .field:active {
+    padding: 5rem;
+    background-color: #b2b1b9;
+    color: #2c2e43;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
 }
 
-.field:hover {
-  transform: scale(1.1);
-  background-color: #ffd523;
-  border: 2px solid #2c2e43;
-}
+@media screen and (hover: hover) {
+  .field {
+    padding: 5rem;
+    background-color: #b2b1b9;
+    color: #2c2e43;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+  }
 
-.field:active {
-  transform: scale(1);
+  .field:hover {
+    transform: scale(1.1);
+    background-color: #ffd523;
+    border: 2px solid #2c2e43;
+  }
+
+  .field:active {
+    transform: scale(1);
+  }
 }
 
 .field__textbox {
@@ -71,30 +87,52 @@ body {
   font-size: 3rem;
 }
 
-.btn {
-  width: 20%;
-  padding: 10px 30px;
-  display: inline-block;
-  text-decoration: none;
-  border-radius: 50px;
-  font-size: 1.5rem;
-  color: #2c2e43;
-  border: none;
-  cursor: pointer;
-  margin: 0 1rem;
-  border: 1px solid transparent;
-  transition: all 0.3s;
+@media screen and (hover: none) {
+  .btn:link,
+  .btn:active,
+  .btn:hover,
+  .btn:visited {
+    width: 20%;
+    padding: 10px 30px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    color: #2c2e43;
+    border: none;
+    cursor: pointer;
+    margin: 0 1rem;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+  }
 }
 
-.btn:hover {
-  transform: scale(1.1);
-  color: #ffd523;
-  background-color: #2c2e43 !important;
-  border: 1px solid #ffd523;
-}
+@media screen and (hover: hover) {
+  .btn {
+    width: 20%;
+    padding: 10px 30px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    color: #2c2e43;
+    border: none;
+    cursor: pointer;
+    margin: 0 1rem;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+  }
 
-.btn:active {
-  transform: scale(1);
+  .btn:hover {
+    transform: scale(1.1);
+    color: #ffd523;
+    background-color: #2c2e43 !important;
+    border: 1px solid #ffd523;
+  }
+
+  .btn:active {
+    transform: scale(1);
+  }
 }
 
 .btn--start {
@@ -163,7 +201,8 @@ body {
   }
 }
 
-@media screen and (max-width: 618px) {
+@media screen and (max-width: 38.625em) {
+  /* 618 px */
   html {
     font-size: 45%;
   }
