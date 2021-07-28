@@ -95,13 +95,29 @@ function addUserInput(numberInput) {
   }
 }
 
+// Check new highscore
+function checkHighscore() {
+  if (scores > highscore) {
+    highscore = scores;
+    setText(highscoreEl, highscore);
+  }
+}
+
+// Check next level
+function checkNextLevel() {
+  if (highscore === maxAttempts) {
+    setText(infoEl, "You are ready for the next level.");
+    changeColor(buttonLevelEl, "#FFD523");
+    level = true;
+  }
+}
+
 // Compare user input with random numbers array
 function checkUserInput() {
   if (checking) {
     // Deactivate checking button
     checking = false;
-    // Activate playing button
-    playing = true;
+
     // check if random sequence order is same as user input sequence order
     let isEqual = userInputNumbers.toString() === randomNumbers.toString();
 
@@ -112,12 +128,23 @@ function checkUserInput() {
       setText(infoEl, "Correct.");
       scores += 1;
       setText(scoresEl, scores);
+      // Activate playing button
+      playing = true;
+      changeColor(buttonCheckEl, "#b2b1b9");
+      changeColor(buttonStartEl, "#ffd523");
     } else {
       setText(infoEl, "Keep training.");
+      // Activate reset
+      reset = true;
+      changeColor(buttonCheckEl, "#b2b1b9");
+      changeColor(buttonResetEl, "#ffd523");
+      checkHighscore();
     }
 
     // User reached maxAttempts
     if (attempts === maxAttempts) {
+      checkHighscore();
+      checkNextLevel();
       // Deactivate playing button
       playing = false;
       // Activate reset button
@@ -125,24 +152,6 @@ function checkUserInput() {
       changeColor(buttonCheckEl, "#B2B1B9");
       changeColor(buttonStartEl, "#B2B1B9");
       changeColor(buttonResetEl, "#FFD523");
-      // Check new highscore
-      if (scores <= highscore) {
-        setText(infoEl, "Keep training. Game over.");
-      } else {
-        highscore = scores;
-        setText(highscoreEl, highscore);
-        // Check next level
-        if (highscore === maxAttempts) {
-          setText(infoEl, "You are ready for the next level.");
-          changeColor(buttonLevelEl, "#FFD523");
-          level = true;
-        } else {
-          setText(infoEl, "Congrats. New highscore!");
-        }
-      }
-    } else {
-      changeColor(buttonCheckEl, "#b2b1b9");
-      changeColor(buttonStartEl, "#ffd523");
     }
   }
 }
